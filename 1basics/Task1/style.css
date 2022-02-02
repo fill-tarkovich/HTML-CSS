@@ -1,0 +1,21 @@
+body {
+  background-color: bisque;
+}
+
+.heading {
+  color: brown;
+  font-size: 45px;
+  font-weight: bold;
+}
+/*my comment in css*/
+h2 {
+  font-size: 30px;
+  color: darkgoldenrod;
+  text-decoration: underline;
+}
+
+#my_id {
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}

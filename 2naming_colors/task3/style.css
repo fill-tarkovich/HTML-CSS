@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("img/background.jpeg");
+  background-attachment: fixed;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: ivory;
+}
+
+ul {
+  width: auto;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: grey;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+a:hover {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h1:nth-child(2) {
+  margin-top: 55px;
+  font-size: 45px;
+  /* color: rgb(39, 39, 39); */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(47, 45, 45, 0.76);
+}
+
+img {
+  width: 400px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.container p {
+  display: block;
+  min-width: 100px;
+  max-width: 800px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 35px;
+}
+
+th {
+  min-width: 250px;
+  height: 50px;
+  background-color: rgba(255, 166, 0, 0.835);
+  border: red 1px solid;
+  border-collapse: inherit;
+}
+
+td {
+  min-width: 250px;
+  height: 50px;
+  background-color: rgba(255, 0, 200, 0.109);
+  border: red 1px solid;
+  text-align: center;
+}
+
+tr:nth-of-type(2n) {
+  background-color: rgba(255, 0, 221, 0.144);
+}
+
+section {
+  /* display: inline-block; */
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  background-color: rgba(47, 45, 45, 0.76);
+  height: 300px;
+  align-items: center;
+}
+
+.box {
+  /* display: inline-block; */
+
+  width: 150px;
+  height: 150px;
+  margin-right: 75px;
+}
+
+.box:last-child {
+  margin-right: 0;
+}
+
+.box--purple {
+  background-color: purple;
+  border: 5px white dotted;
+}
+
+.box--blue {
+  background-color: rgb(110, 205, 236);
+  border: 10px white double;
+}
+
+.box--rainbow {
+  background-color: rgb(13, 41, 19);
+  border-top: 5px green solid;
+  border-right: 5px yellow solid;
+  border-bottom: 5px blue solid;
+  border-left: 5px red solid;
+}
+
+.box--green {
+  background-color: rgb(78, 161, 127);
+  border: 5px wheat dashed;
+  border-radius: 10px;
+}
+
+.box--circle {
+  background-color: tomato;
+  border: 4px white dotted;
+  border-radius: 80px;
+}

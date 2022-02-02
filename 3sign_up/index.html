@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Sign Up</h1>
+      <p class="top-text">It's free and only takes a minute</p>
+      <form>
+        <div class="form-input">
+          <label for="name">First name</label>
+          <img class="icon" src="img/id.svg" />
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="form-input">
+          <label for="surname">Last name</label>
+          <input type="text" name="surname" id="surname" />
+        </div>
+        <div class="form-input">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="form-input">
+          <label for="password">Password</label>
+          <img class="icon" src="img/lock.svg" />
+          <input
+            type="password"
+            name="password"
+            autocomplete="new-password"
+            id="password"
+          />
+        </div>
+        <div class="form-input">
+          <label for="confirm">Confirm Password</label>
+          <img class="icon" src="img/lock.svg" />
+          <input
+            type="password"
+            name="confirm"
+            autocomplete="new-password"
+            id="confirm"
+          />
+        </div>
+      </form>
+      <button>SIGN UP</button>
+      <p class="text-bottom">
+        By clicking the Sign Up button, you agree to our
+        <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+      </p>
+    </div>
+    <p class="text-below">
+      Already have an account? <a href="#">Login Here</a>
+    </p>
+  </body>
+</html>

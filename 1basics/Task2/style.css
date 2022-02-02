@@ -1,0 +1,27 @@
+body {
+  background-color: rgba(128, 16, 90, 0.52);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(11, 44, 41);
+  text-align: center;
+  scroll-behavior: smooth;
+}
+strong {
+  display: block;
+}
+h1 {
+  display: inline;
+}
+
+div {
+  background-image: url("img/w-qjCHPZbeXCQ-unsplash.jpg");
+  background-position: center;
+  object-fit: scale-down;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
