@@ -56,11 +56,13 @@ input {
 }
 
 input:hover,
-input:active {
+input:active,
+input:focus {
   border: 1px #ec6e1bde solid;
+  outline: 1px #ec6e1bde solid;
 }
 
-button {
+.button {
   display: block;
   margin: auto;
   margin-top: 33px;
@@ -71,6 +73,10 @@ button {
   color: white;
   font-size: 18px;
   border-radius: 6px;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 3px 1px rgba(92, 91, 91, 0.75);
 }
 
 .text-bottom {
@@ -86,6 +92,10 @@ button {
 a {
   text-decoration: none;
   color: #ec6e1bde;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .text-below {
