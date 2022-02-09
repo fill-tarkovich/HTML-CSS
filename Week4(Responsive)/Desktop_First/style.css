@@ -1,0 +1,27 @@
+body {
+  background-color: orange;
+}
+
+h1::after {
+  content: "Hello Desktop";
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 756px) {
+  body {
+    background-color: yellow;
+  }
+  h1::after {
+    content: "Hello Tablet";
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    background-color: green;
+  }
+  h1::after {
+    content: "Hello Mobile";
+  }
+}
