@@ -1,0 +1,112 @@
+body {
+  background-color: rgba(112, 128, 144, 0.589);
+  color: #141414;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+}
+
+h1:hover {
+  color: antiquewhite;
+  text-decoration: overline;
+  cursor: pointer;
+}
+
+h1::before {
+  content: "before element";
+  position: absolute;
+  top: -10px;
+  right: 1050px;
+}
+
+h1::after {
+  content: "after element";
+  position: absolute;
+  top: 10px;
+  left: 1050px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+a:hover {
+  color: burlywood;
+  text-decoration: underline;
+}
+
+.box {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(121, 154, 160, 0.746);
+  margin: auto;
+  margin-left: 40px;
+  text-align: center;
+}
+
+.box:hover {
+  transform: scale(1.2);
+}
+
+p:nth-child(odd) {
+  color: cornsilk;
+}
+
+p:nth-child(2n + 9) {
+  text-decoration: underline;
+}
+
+.absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 350px;
+}
+
+.sticky {
+  position: sticky;
+  top: 200px;
+}
+
+.relative {
+  position: relative;
+  top: -200px;
+}
+
+.modal {
+  position: relative;
+  height: 300px;
+  width: 500px;
+  margin: auto;
+  background-color: aqua;
+}
+
+.modal p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+
+.modal button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
