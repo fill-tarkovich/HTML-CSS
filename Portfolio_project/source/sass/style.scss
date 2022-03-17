@@ -29,6 +29,10 @@ body {
 .wrapper {
   margin: auto;
   width: 1000px;
+
+  @media (max-width: 375px) {
+    width: 300px;
+  }
 }
 
 header {
@@ -44,8 +48,8 @@ header {
   background-image: none;
   height: auto;
   .main-nav {
-    position: unset;
     margin-bottom: 5%;
+    position: unset;
   }
 }
 
@@ -57,10 +61,22 @@ header {
   background-color: #060c1bdc;
   z-index: 100;
 
+  @media (max-width: 375px) {
+    position: unset;
+    padding: 0;
+  }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+
+    @media (max-width: 375px) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%;
+    }
   }
 
   ul {
@@ -69,6 +85,16 @@ header {
     justify-content: space-between;
     text-transform: uppercase;
     font-size: 1.25rem;
+
+    @media (max-width: 375px) {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      height: 180px;
+      text-align: right;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
 
     a {
       color: $text;
@@ -102,6 +128,11 @@ h1 {
   width: max-content;
   margin-left: 25%;
   color: $text;
+
+  @media (max-width: 375px) {
+    font-size: 2rem;
+    margin-left: 5%;
+  }
 }
 
 h2 {
@@ -110,12 +141,21 @@ h2 {
 
 .projects {
   padding: 3rem;
+
+  @media (max-width: 375px) {
+    padding: 0;
+  }
 }
 
 .projects-list {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .projects-list__item {
@@ -128,6 +168,11 @@ h2 {
   padding-bottom: 1rem;
   border: 1px solid $black;
   box-shadow: 6px -6px 5px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 375px) {
+    width: 80%;
+    margin-bottom: 2em;
+  }
 
   img {
     width: 100%;
@@ -162,23 +207,46 @@ h2 {
   justify-content: space-between;
   margin-top: 2rem;
 
+  @media (max-width: 375px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   img {
     width: 25%;
+    @media (max-width: 375px) {
+      width: 100%;
+    }
   }
 
   p {
     width: 70%;
+    @media (max-width: 375px) {
+      width: 100%;
+      margin-top: 2em;
+      text-align: justify;
+    }
   }
 }
 
 .skills {
   padding: 3rem;
+  @media (max-width: 375px) {
+    padding: 0;
+  }
 }
 
 .skills-list {
   display: flex;
   justify-content: space-around;
   margin: 5em 0;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+    margin-bottom: 0;
+  }
 
   :not(p):nth-child(2n) {
     background-color: rgba(128, 128, 128, 0.287);
@@ -193,6 +261,11 @@ h2 {
   border: 1px solid $black;
   box-shadow: 6px -6px 5px rgba(0, 0, 0, 0.3);
   padding: 1em 0;
+
+  @media (max-width: 375px) {
+    width: 70%;
+    margin-bottom: 2em;
+  }
 
   svg {
     width: 75px;
@@ -240,12 +313,18 @@ footer {
 form {
   width: 50%;
   margin: auto;
+  @media (max-width: 375px) {
+    width: 85%;
+  }
 }
 
 .form-input {
   position: relative;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
 }
 
 label {
@@ -258,11 +337,17 @@ input {
   width: 70%;
   border-radius: 6px;
   margin-bottom: 1.5em;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 }
 
 textarea {
   border-radius: 6px;
   width: 70%;
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 }
 
 input:hover,
@@ -298,7 +383,12 @@ textarea:hover {
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 1rem;
+  @media (max-width: 375px) {
+    font-size: 0.5rem;
+    right: 10px;
+    bottom: 15px;
+  }
 }
 
 .grid-container {
@@ -308,15 +398,23 @@ textarea:hover {
   width: 80%;
   grid-auto-flow: row dense;
   grid-template-columns: 1fr 1fr 35% 35%;
-  grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
+  grid-template-rows: 7em 7em 9em 9em 9em;
   gap: 1rem 1rem;
-  justify-items: center;
+  justify-items: stretch;
   grid-template-areas:
     "a a b c"
     "a a d c"
     "e h h c"
     "f h h i"
     "g h h i";
+
+  @media (max-width: 375px) {
+    grid-template-columns: 1fr 1fr 30% 30%;
+    grid-template-rows: 3em 3em 4em 4em 4em;
+    gap: 0.5rem 0.5rem;
+    width: 90%;
+    margin-bottom: 1.5em;
+  }
 }
 
 .grid-item {
@@ -361,4 +459,21 @@ textarea:hover {
 }
 .i {
   grid-area: i;
+}
+
+.menuBtn {
+  display: none;
+  @media (max-width: 375px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 70px;
+    color: white;
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    background-color: #101f47dc;
+  }
 }

@@ -1,18 +1,33 @@
 "use strict";
 
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass")(require("sass"));
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const server = require("browser-sync").create();
-const csso = require("gulp-csso");
-const rename = require("gulp-rename");
-const webp = require("gulp-webp");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
-const del = require("del");
+import gulp from "gulp";
+import plumber from "gulp-plumber";
+// const sourcemap = require("gulp-sourcemaps");
+import sourcemap from "gulp-sourcemaps";
+// const sass = require("gulp-sass")(require("sass"));
+import gulpSass from "gulp-sass";
+import dartSass from "sass";
+const sass = gulpSass(dartSass);
+// const postcss = require("gulp-postcss");
+import postcss from "gulp-postcss";
+// const autoprefixer = require("autoprefixer");
+import autoprefixer from "autoprefixer";
+// const server = require("browser-sync").create();
+import server from "browser-sync";
+// .create();
+// const csso = require("gulp-csso");
+import csso from "gulp-csso";
+// const rename = require("gulp-rename");
+import rename from "gulp-rename";
+// const webp = require("gulp-webp");
+import webp from "gulp-webp";
+// const posthtml = require("gulp-posthtml");
+import posthtml from "gulp-posthtml";
+// const include = require("posthtml-include");
+import include from "posthtml-include";
+// const del = require("del");
+import del from "del";
+import imagemin from "gulp-imagemin";
 
 gulp.task("css", function () {
   return gulp
@@ -48,9 +63,13 @@ gulp.task("refresh", function (done) {
 
 gulp.task("webp", function () {
   return gulp
-    .src("source/img/**/*.{png,jpg}")
+    .src("build/img/**/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("compress", function () {
+  return gulp.src("source/img/*").pipe(imagemin()).pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
@@ -80,5 +99,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "compress", "html"));
 gulp.task("start", gulp.series("build", "server"));

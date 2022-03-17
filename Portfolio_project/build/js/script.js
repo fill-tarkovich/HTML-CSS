@@ -1,4 +1,5 @@
 const scrollButton = document.getElementById("scrollBtn");
+const menu = document.querySelector(".menu");
 
 window.onscroll = function () {
   showBtn();
@@ -14,4 +15,12 @@ function showBtn() {
 function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+function showMenu() {
+  if (menu.style.display === "flex") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "flex";
+  }
 }

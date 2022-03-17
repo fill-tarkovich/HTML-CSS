@@ -2,10 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Study project",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "webp": "gulp webp",
+    "server": "gulp server"
   },
   "repository": {
     "type": "git",
