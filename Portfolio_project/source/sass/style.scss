@@ -296,11 +296,18 @@ h2 {
 footer {
   background-color: #060c1bdc;
   padding: 3em 0 2em 0;
+  @media (max-width: 375px) {
+    padding-top: 1.5em;
+  }
 
   h2 {
     text-align: center;
     color: white;
     padding-bottom: 2em;
+    @media (max-width: 375px) {
+      font-size: 1rem;
+      padding-bottom: 1.2em;
+    }
   }
 
   p {
