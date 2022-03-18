@@ -29,8 +29,8 @@ function showMenu() {
 
 function colorMenu() {
   if (
-    document.body.scrollTop > 850 ||
-    document.documentElement.scrollTop > 850
+    document.body.scrollTop > 800 ||
+    document.documentElement.scrollTop > 800
   ) {
     nav.style.backgroundColor = "#060c1bdc";
   } else {
