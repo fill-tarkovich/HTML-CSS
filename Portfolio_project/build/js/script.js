@@ -4,7 +4,7 @@ const nav = document.querySelector(".main-nav");
 
 window.onscroll = function () {
   showBtn();
-  colorMenu();
+  // colorMenu();
 };
 
 function showBtn() {
@@ -27,13 +27,13 @@ function showMenu() {
   }
 }
 
-function colorMenu() {
-  if (
-    document.body.scrollTop > 800 ||
-    document.documentElement.scrollTop > 800
-  ) {
-    nav.style.backgroundColor = "#060c1bdc";
-  } else {
-    nav.style.backgroundColor = "none";
-  }
-}
+// function colorMenu() {
+//   if (
+//     document.body.scrollTop > 800 ||
+//     document.documentElement.scrollTop > 800
+//   ) {
+//     nav.style.backgroundColor = "#060c1bdc";
+//   } else {
+//     nav.style.backgroundColor = "none";
+//   }
+// }
