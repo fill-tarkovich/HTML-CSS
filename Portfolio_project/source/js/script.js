@@ -1,8 +1,10 @@
 const scrollButton = document.getElementById("scrollBtn");
 const menu = document.querySelector(".menu");
+const nav = document.querySelector(".main-nav");
 
 window.onscroll = function () {
   showBtn();
+  colorMenu();
 };
 
 function showBtn() {
@@ -22,5 +24,16 @@ function showMenu() {
     menu.style.display = "none";
   } else {
     menu.style.display = "flex";
+  }
+}
+
+function colorMenu() {
+  if (
+    document.body.scrollTop > 850 ||
+    document.documentElement.scrollTop > 850
+  ) {
+    nav.style.backgroundColor = "#060c1bdc";
+  } else {
+    nav.style.backgroundColor = "none";
   }
 }
